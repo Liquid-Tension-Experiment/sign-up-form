@@ -9,8 +9,11 @@
 <body>
     <div class="img-col">
         <div class="logo-section">
-            <div class="logo-img"></div>
+            <img src="img/odin-lined.png" alt="Odin logo" class="logo">
             <div class="logo-text">ODIN</div>
+        </div>
+        <div class="image-credits">
+            Photo by <a href="https://unsplash.com/@skeedio" target="_blank" rel="noopener noreferrer" class="credit">Nora Baltus</a> at <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer" class="credit">Unsplash</a>
         </div>
     </div>
     <div class="content-col">
@@ -22,36 +25,37 @@
         </div>
         <div class="content-row">
             <div class="content-container">
-                <form action="">
+                <form action="" id="info-form">
                     <legend>Let's Do This!</legend>
                     <div class="form-row">
                         <div class="form-item">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text" name="first-name" id="first-name">
+                            <input type="text" name="first-name" id="first-name" required minlength="1">
                         </div>
                         <div class="form-item">
                             <label for="last-name">LAST NAME</label>
-                            <input type="text" name="last-name" id="last-name">
+                            <input type="text" name="last-name" id="last-name" required minlength="1">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item">
                             <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="form-item">
                             <label for="phone">PHONE</label>
-                            <input type="tel" name="phone" id="phone">
+                            <input type="tel" name="phone" id="phone" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-item">
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password"
+                             required minlength="8">
                         </div>
                         <div class="form-item">
                             <label for="password-confirm">PASSWORD</label>
-                            <input type="password" name="password-confirm" id="password-confirm">
+                            <input type="password" name="password-confirm" id="password-confirm" required minlength="8">
                         </div>
                     </div>
                 </form>
@@ -59,7 +63,7 @@
         </div>
         <div class="content-row">
             <div class="content-container">
-                <button class="signup">Create Account</button>
+                <button class="signup" type="submit" form="info-form">Create Account</button>
                 <div class="text login-directions">Already have an account? <a href="#" class="link">Log in</a></div>
             </div>
         </div>
